@@ -1,0 +1,18 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  run:
+    requires:
+      vars: [DAY]
+    cmds:
+      - c3c compile-run "day{{.DAY}}.c3"
+
+  new:
+    requires:
+      vars: [DAY]
+    cmds:
+      - sed "s/XX/{{.DAY}}/g" template.c3 > "day{{.DAY}}.c3"
+    status:
+      - test -f "day{{.DAY}}.c3"
