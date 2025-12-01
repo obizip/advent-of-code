@@ -13,6 +13,6 @@ tasks:
     requires:
       vars: [DAY]
     cmds:
-      - cp template.c3 "day{{.DAY}}.c3"
+      - sed "s/XX/{{.DAY}}/g" template.c3 > "day{{.DAY}}.c3"
     status:
       - test -f "day{{.DAY}}.c3"
