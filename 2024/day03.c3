@@ -45,6 +45,7 @@ fn long? solve2(List{String} lines)
 			if (line[i:4] == "do()") {
 				is_enabled = true;
 			}
+
 			if ((i + 7 < line.len - 1) && (line[i:7] == "don't()")) {
 				is_enabled = false;
 			}
