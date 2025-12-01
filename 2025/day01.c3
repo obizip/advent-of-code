@@ -47,7 +47,7 @@ fn long? solve2(List{String} lines)
 		switch(direction)
 		{
 			case 'R':
-				curr = curr + rem;
+				curr += rem;
 				if (curr > max)
 				{
 					curr %= divisor;
@@ -55,7 +55,7 @@ fn long? solve2(List{String} lines)
 				}
 			case 'L':
 				long prev = curr;
-				curr = curr - rem;
+				curr -= rem;
 				// 0 -> 99 : one click makes it points at 99.
 				if (curr < 1 && prev != 0) n_zeros++;
 
