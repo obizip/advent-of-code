@@ -3,12 +3,16 @@ import std::io, std::io::file, std::collections::list;
 fn long? solve1(List{String} lines)
 {
 	long ans = 0;
+	foreach (line : lines) {
+	}
 	return ans;
 }
 
 fn long? solve2(List{String} lines)
 {
 	long ans = 0;
+	foreach (line : lines) {
+	}
 	return ans;
 }
 
