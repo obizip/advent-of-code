@@ -1,5 +1,8 @@
 import std::io, std::collections, std::math, std::sort;
 
+// const INPUT_PATH = "input/inputXX.txt";
+const INPUT_PATH = "input/inputXX-test.txt";
+
 fn long? solve1(List{String} lines)
 {
 	long ans = 0;
@@ -20,8 +23,7 @@ fn void main()
 {
 	@pool()
 	{
-		File f = file::open("input/inputXX-test.txt", "rb")!!;
-		// File f = file::open("input/inputXX.txt", "rb")!!;
+		File f = file::open(INPUT_PATH, "rb")!!;
 		defer (void)f.close();
 
 		List{String} lines;
